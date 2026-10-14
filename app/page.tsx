@@ -1,69 +1,71 @@
 import Image from "next/image";
+import NeboLogo from "../images/neboLogo.png";
+import MobileApp from "../images/mobileApp.png";
+
+
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div>
+
+
+    <div className="flex items-center justify-between px-18 py-2 mt-5">
+            <div>
         <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            src={NeboLogo}
+            alt="Nebo logo"
+            width={178}
+            height={60}
+            priority
+            className="h-auto w-[7.5rem] md:w-[10rem]"
+          />
+      </div>
+
+      <div className="flex gap-16">
+        <a href="">Features</a>
+        <a href="">How it Works</a>
+        <a href="">Pricing</a>
+      </div>
+
+      <a href="/input" className="bg-[#FE0194] py-3 px-10 rounded-2xl text-white">Join Waitlist</a>
+      
+   
+    </div>
+
+
+      <div className="flex flex-col gap-5 mt-10">
+        <div className="flex justify-center mx-auto">
+        <button className="text-[14px] rounded-3xl py-3 px-10 border-2 border-[#00000040]">Join the Waitlist</button>
+      </div>
+
+      <div className="flex justify-center mx-auto">
+        <h1 className="text-[48px] w-[495px] font-bold text-center">Manage and Live Better in <span className="text-[#FE0194]">Your Estate</span></h1>
+      </div>
+
+      <div className="flex justify-center mx-auto">
+        <p className="w-[415px] text-center">Nebo brings your estate, community and everyday services together in one simple experience.</p>
+      </div>
+
+      <section className="flex justify-center mx-auto">
+        <input type="text" placeholder="Enter your email" className="py-4 px-10 border-2 rounded-l-4xl" />
+
+        <button
+        className="py-4 px-5 text-white bg-black border-2 border-black rounded-r-full">Join Waitlist
+        </button>
+      </section>
+      </div>
+
+      <div className="mt-5">
+         <Image
+            src={MobileApp}
+            alt="Nebo logo"
+            priority
+            className="h-auto w-full md:w-full"
+          />
+      </div>
+
+      
     </div>
   );
 }
